@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Slider</title>
+    <link rel="stylesheet" href="/pages/home.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">NucleoNex<label></label></h2>
+      <nav class="navigation">
+        <a href="/pages/home.html">HOME</a>
+        <a href="/pages/project.html">PROJECTS</a>
+        <a href="/pages/resources.html">RESOURCES</a>
+        <a href="/pages/contact.html">ABOUT US</a>
+
+        <button class="btnlogin" id="signOutBtn">SIGN OUT</button>
+      </nav>
+    </header>
+    <script>
+      document.getElementById("loginBtn").addEventListener("click", function () {
+        window.location.href = "/pages/newLogin.html"; // Replace this URL with your desired external link
+      });
+      document.getElementById("signBtn").addEventListener("click", function () {
+        window.location.href = "/pages/newSignUp.html"; // Replace this URL with your desired external link
+      });
+    </script>
+    <div class="image-overlay"></div>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img
+          class="carousel-image"
+          src="https://wallpapers.com/images/hd/laboratory-background-mg9d9d5x8zzf2noz.jpg"
+          alt="Image 1"
+        />
+        <img
+          class="carousel-image"
+          src="https://images6.alphacoders.com/134/1349907.jpeg"
+          alt="Image 2"
+        />
+        <img
+          class="carousel-image"
+          src="https://static.vecteezy.com/system/resources/thumbnails/022/006/618/small_2x/science-background-illustration-scientific-design-flasks-glass-and-chemistry-physics-elements-generative-ai-photo.jpeg"
+          alt="Image 3"
+        />
+      </div>
+    </div>
+
+    <div class="tagline-outer">
+      <div class="tagline-inner">
+        <div class="tagline2" , id="Greet"></div>
+        <div class="tagline1">What's Next?</div>
+        <div class="tagline">We're Researching the <span id="future">Future.</span></div>
+      </div>
+    </div>
+
+    <script src="/pages/slider.js"></script>
+    <script>
+      let UserCred = JSON.parse(sessionStorage.getItem("user-creds"));
+      let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+      let WelcomeHeading = document.getElementById("Greet");
+      let Email = document.getElementById("email");
+      let SignOutBtn = document.getElementById("signOutBtn");
+
+      let Signout = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+        window.location.href = "/pages/lander.html";
+      };
+
+      let CheckCred = () => {
+        if (!sessionStorage.getItem("user-creds")) window.location.href = "lander.html";
+        else {
+          WelcomeHeading.innerText = `Welcome ${UserInfo.firstname + " " + UserInfo.lastname}!`;
+          Email.placeholder = `${UserCred.email}`;
+        }
+      };
+
+      window.addEventListener("load", CheckCred);
+      SignOutBtn.addEventListener("click", Signout);
+    </script>
+  </body>
+</html>

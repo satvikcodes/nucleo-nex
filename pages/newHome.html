@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/pages/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="heading"></h1>
+      <form action="#" id="form">
+        <input type="email" placeholder="" id="email" readonly />
+
+        <button type="button" id="signOutButton">Sign Out</button>
+      </form>
+    </div>
+    <script>
+      let UserCred = JSON.parse(sessionStorage.getItem("user-creds"));
+      let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+      let WelcomeHeading = document.getElementById("heading");
+      let Email = document.getElementById("email");
+      let SignOutBtn = document.getElementById("signOutButton");
+
+      let Signout = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+        window.location.href = "/pages/newLogin.html";
+      };
+
+      let CheckCred = () => {
+        if (!sessionStorage.getItem("user-creds")) window.location.href = "login.html";
+        else {
+          WelcomeHeading.innerText = `Welcome ${UserInfo.firstname + " " + UserInfo.lastname}!`;
+          Email.placeholder = `${UserCred.email}`;
+        }
+      };
+
+      window.addEventListener("load", CheckCred);
+      SignOutBtn.addEventListener("click", Signout);
+    </script>
+  </body>
+</html>

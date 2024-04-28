@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Attendance Record</title>
+    <link rel="stylesheet" href="/pages/attend.css" />
+    <link rel="stylesheet" href="/pages/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">NucleoNex<label></label></h2>
+      <nav class="navigation">
+        <a href="/pages/facultyHome.html">HOME</a>
+        <a href="#">PROJECTS</a>
+        <a href="/pages/resources.html">RESOURCES</a>
+
+        <a href="/pages/attend.html">ATTENDANCE</a>
+      </nav>
+    </header>
+    <script>
+      document.getElementById("profileBtn").addEventListener("click", function () {
+        window.location.href = "/pages/profile.html";
+      });
+      document.getElementById("signBtn").addEventListener("click", function () {
+        window.location.href = "/pages/newSignUp.html";
+      });
+    </script>
+    <div class="video-background">
+      <video autoplay loop muted>
+        <source src="/assets/videos/mygif2.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="content">
+      <h1>Attendance Management</h1>
+      <div class="attendance-form">
+        <input type="text" id="studentId" placeholder="Enter Student ID" required />
+        <button onclick="markAttendance()">Mark Attendance</button>
+      </div>
+      <div class="attendance-list">
+        <h2>Attendance Record</h2>
+        <button onclick="toggleListVisibility()">Click to View</button>
+        <ul id="attendanceRecords" style="display: none"></ul>
+      </div>
+    </div>
+    <script src="/script/attend.js"></script>
+  </body>
+</html>

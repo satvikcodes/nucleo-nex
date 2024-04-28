@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Resume</title>
+    <link rel="stylesheet" href="/pages/resume.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <img class="logo" src="/assets/images/WhatsApp Image 2024-03-16 at 16.16.36.jpeg" alt="" />
+    </div>
+    <div class="header">
+      <div class="tagline">
+        <div>Ready to show your projects?</div>
+        <div>Upload your Project Notes</div>
+      </div>
+    </div>
+    <div class="container">
+      <div>Upload Project</div>
+      <div class="upload-container">
+        <form id="resumeForm" action="shortlist.html" method="post">
+          <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" name="resume" />
+          <label for="resumeUpload" class="upload-btn">Choose File</label>
+          <span id="fileName">No file chosen</span>
+          <a href="shortlist.html"><button type="submit" class="submit-btn">Submit</button></a>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript Code
+      document.addEventListener("DOMContentLoaded", function () {
+        const fileInput = document.getElementById("resumeUpload");
+        const fileNameDisplay = document.getElementById("fileName");
+        const resumeForm = document.getElementById("resumeForm");
+
+        fileInput.addEventListener("change", function () {
+          const fileName = this.files[0].name;
+          fileNameDisplay.textContent = fileName;
+        });
+
+        resumeForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          window.location.href = "shortlist.html";
+        });
+      });
+    </script>
+  </body>
+</html>

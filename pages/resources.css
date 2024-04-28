@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "poppins", sans-serif;
+}
+.faq-madhav {
+  display: flex;
+  height: 20rem;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+.daata {
+  width: 50%;
+  height: 100%;
+  /* padding: 0.5rem; */
+  display: flex;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  opacity: 80%;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  padding: 0.5rem;
+}
+.data-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+}
+.res-img {
+  width: 100%;
+  height: 90%;
+  border-radius: 8px;
+}
+.faq-item {
+  width: 90%;
+  /* border: 2px solid black; */
+  margin: 1rem auto;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.faq-all {
+  margin: 4rem;
+}
+.faq-question {
+  margin-bottom: 6px;
+}
+.faq-title {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  color: white;
+}
+#myvideo {
+  position: fixed; /* Fixed to cover all the screen, and it won't move when you scroll */
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1; /* Stay in the background */
+}
+
+.uploadButton {
+  margin-right: 10px;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  background: rgb(65, 160, 65);
+  color: white;
+}

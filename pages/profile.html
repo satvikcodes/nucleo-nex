@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/pages/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="heading"></h1>
+      <form action="#" id="form">
+        <input type="text" placeholder="" id="name" readonly />
+        <input type="email" placeholder="" id="email" readonly />
+        <input type="text" placeholder="" id="projectOne" readonly />
+        <input type="text" placeholder="" id="projectTwo" readonly />
+
+        <button type="button" id="backToHome">Home</button>
+      </form>
+    </div>
+    <script>
+      let UserCred = JSON.parse(sessionStorage.getItem("user-creds"));
+      let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+      let WelcomeHeading = document.getElementById("heading");
+      let Email = document.getElementById("email");
+      let Name = document.getElementById("name");
+      let homeButton = document.getElementById("backToHome");
+      let projectOne = document.getElementById("projectOne");
+      let projectTwo = document.getElementById("projectTwo");
+
+      //   let Signout = () => {
+      //     sessionStorage.removeItem("user-creds");
+      //     sessionStorage.removeItem("user-info");
+      //     window.location.href = "newLogin.html";
+      //   };
+
+      let CheckCred = () => {
+        if (!sessionStorage.getItem("user-creds")) window.location.href = "facultyLogin.html";
+        else {
+          WelcomeHeading.innerText = `PROFILE PAGE`;
+          Name.placeholder = `Name - ${UserInfo.firstname + " " + UserInfo.lastname}`;
+          Email.placeholder = `Email - ${UserCred.email}`;
+          projectOne.placeholder = `Project 1 - ${UserInfo.firstproject}`;
+          projectTwo.placeholder = `Project 2 - ${UserInfo.secondproject}`;
+        }
+      };
+
+      window.addEventListener("load", CheckCred);
+      homeButton.addEventListener("click", function () {
+        window.location.href = "facultyHome.html"; // Replace this URL with your desired external link
+      });
+    </script>
+  </body>
+</html>

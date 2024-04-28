@@ -1,0 +1,93 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  font-family: "Poppins", Arial, sans-serif; /* Apply Poppins to all content */
+}
+
+h1,
+h2 {
+  color: #7df9ff;
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.attendance-form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.attendance-form input[type="text"] {
+  padding: 8px;
+  margin-right: 10px;
+  width: 200px;
+  border: 2px solid #7df9ff;
+  color: #333;
+  background-color: #e0ffff;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.attendance-form button {
+  padding: 10px 15px;
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.attendance-form button:hover {
+  background-color: #228b22;
+}
+
+.attendance-list h2 {
+  color: #7df9ff;
+}
+
+.attendance-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attendance-list ul li {
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-family: "Poppins", Arial, sans-serif;
+}
+.attendance-list button {
+  padding: 7px 12px;
+  background-color: #32cd32;
+  border: black;
+  cursor: pointer;
+  font-family: "Poppins", Arial, sans-serif;
+}
+.attendance-list button:hover {
+  background-color: #228b22;
+}
