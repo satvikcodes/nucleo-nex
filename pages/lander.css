@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.carousel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: -0.5px;
+  z-index: 0;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%;
+  height: 100%;
+  /* Set width to accommodate all three images */
+}
+
+.carousel-image {
+  width: 33.333%;
+  /* Each image covers one-third of the width */
+  height: 100%;
+  object-fit: cover;
+  filter: opacity(80%) blur(2px);
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 10;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.carousel-btn-left {
+  left: 10px;
+}
+
+.carousel-btn-right {
+  right: 10px;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav {
+  position: absolute;
+  top: 0px;
+  color: white;
+  height: 30px;
+  width: 100vw;
+  z-index: 10;
+}
+.tagline-outer {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  /* justify-content: center; */
+  margin: auto;
+  z-index: 12;
+}
+.tagline-inner {
+  margin: 15rem auto;
+  font-size: 4rem;
+  font-weight: 800;
+  /* text-shadow: 7px 11px 4px rgba(0, 0, 0, 2); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tagline1 {
+  align-self: flex-start;
+  color: rgb(26, 241, 123);
+}
+
+.tagline2 {
+  align-self: flex-start;
+  color: rgb(255, 255, 255);
+}
+
+#future {
+  color: rgb(26, 241, 123);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: rgb(26, 241, 123);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation .btnlogin {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+.navigation .btnlogin:hover {
+  background: rgb(60, 165, 60);
+  color: rgb(255, 255, 255);
+}
