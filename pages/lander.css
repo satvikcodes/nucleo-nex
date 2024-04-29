@@ -172,8 +172,9 @@ header {
 }
 
 .navigation .btnlogin {
-  width: 130px;
+  width: 190px;
   height: 50px;
+  
   background: transparent;
   border: 2px solid #fff;
   outline: none;
@@ -184,12 +185,14 @@ header {
   font-weight: 500;
   margin-left: 40px;
   transition: 0.5s;
+
 }
 
 .navigation .btnlogin:hover {
   background: rgb(60, 165, 60);
   color: rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 
 .prevent .box-container {
   display: flex;
@@ -223,4 +226,8 @@ header {
 
 .prevent .box-container .box:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+=======
+#loginBtn{
+  padding:0px;
+>>>>>>> e9656304e706d9baa244624f218245b6f7c34bc8
 }
