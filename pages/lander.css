@@ -204,6 +204,7 @@ header {
   background: rgb(60, 165, 60);
   color: rgb(255, 255, 255);
 }
+<<<<<<< HEAD
 
 #loginBtn {
   padding: 0px;
@@ -474,4 +475,8 @@ input:checked + label .description{
   88% {
     transform: rotate(-1deg);
   }
+=======
+#loginBtn {
+  padding: 0px;
+>>>>>>> 428d7cb740e3a02390781f8b2fa9f36620b7729d
 }
