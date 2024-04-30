@@ -238,3 +238,48 @@ header {
 .prevent .box-container .box:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
+
+.footer {
+  background-image: url("images/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .box-container .box {
+  flex: 1 1 25rem;
+  margin: 2rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  padding: 1rem 0;
+}
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  padding: 0.5rem 0;
+}
+.footer .box-container .box a {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  padding: 0.5rem 0;
+  display: flex;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .credit {
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  color: var(--dark-blue);
+}
+.footer .credit a {
+  color: var(--blue);
+}
