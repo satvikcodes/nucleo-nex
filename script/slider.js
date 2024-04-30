@@ -32,3 +32,19 @@ function autoSlide() {
 setInterval(autoSlide, 2000); // Change slide every 5 seconds
 
 showSlides();
+
+//rest script for btn click
+document.getElementById("loginBtn").addEventListener("click", function () {
+  window.location.href = "/pages/newLogin.html"; // Replace this URL with your desired external link
+});
+document.getElementById("signBtn").addEventListener("click", function () {
+  window.location.href = "/pages/facultyLogin.html"; // Replace this URL with your desired external link
+});
+
+//script for typing effect of aim,vision, mission
+var typed = new Typed('.auto-type', {
+  strings : ["AIM","VISION", "MISSION"],
+  typeSpeed :150 ,
+  backSpeed :150 ,
+  loop : true
+});
