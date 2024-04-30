@@ -48,3 +48,31 @@ var typed = new Typed('.auto-type', {
   backSpeed :150 ,
   loop : true
 });
+
+// SCRIPT FOR CARD VIEW OF FACULTIES
+
+const showSocial = (toggleCard, socialCard) =>{
+    const toggle = document.getElementById(toggleCard),
+          social = document.getElementById(socialCard)
+    
+    toggle.addEventListener('click', ()=>{
+        // If the animation class exists, we add the down-animation class
+        if(social.classList.contains('animation')){
+            social.classList.add('down-animation')
+ 
+            // We remove the down-animation class
+            setTimeout(() =>{
+                social.classList.remove('down-animation')
+            }, 1000)
+        }
+ 
+        // We add the animation class to the div tag with the card__social class
+        social.classList.toggle('animation')
+    })
+ }
+ showSocial('card-toggle1','card-social1')
+ showSocial('card-toggle2','card-social2')
+ showSocial('card-toggle3','card-social3')
+ showSocial('card-toggle4','card-social4')
+ showSocial('card-toggle5','card-social5')
+ showSocial('card-toggle6','card-social6')
