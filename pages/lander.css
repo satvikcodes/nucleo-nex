@@ -11,7 +11,7 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h3-font-size: 1.125rem;
-  --smaller-font-size: .75rem;
+  --smaller-font-size: 0.75rem;
 }
 * {
   margin: 0;
@@ -220,10 +220,10 @@ header {
   color: rgb(60, 165, 60);
   font-weight: 800;
 }
-
-<<<<<<< HEAD
-.vma{
-=======
+.vma {
+  background-color: #c3cbdc;
+  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+}
 .prevent .box-container .box {
   flex: 1 1 15rem;
   border-radius: 0.5rem;
@@ -252,9 +252,8 @@ header {
 
 .prevent .box-container .box:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-} */
-.vma {
->>>>>>> 7c7482a4bb663d692bcc317188aa5e0a95efa004
+}
+*/ .vma {
   background-color: #c3cbdc;
   background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
 }
@@ -337,9 +336,8 @@ input:checked + label .description {
   background: url(/assets/images/missionimg.webp);
 }
 
-<<<<<<< HEAD
 /* CSS FOR FACULTY SECTION  */
-.fac-heading{
+.fac-heading {
   font-size: 3rem;
   margin-left: 6rem;
   font-weight: 600;
@@ -367,7 +365,7 @@ input:checked + label .description {
   flex-direction: column;
   justify-content: space-around;
 }
-.fac-card-row{
+.fac-card-row {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -458,7 +456,8 @@ input:checked + label .description {
   padding: 6px;
   border-radius: 50%;
 }
-.card__social-text, .card__social-list {
+.card__social-text,
+.card__social-list {
   position: absolute;
   top: 0;
   left: 0;
@@ -480,10 +479,12 @@ input:checked + label .description {
 }
 
 @keyframes up-animation {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  50%, 60% {
+  50%,
+  60% {
     transform: rotate(-3deg);
   }
   88% {
@@ -496,21 +497,24 @@ input:checked + label .description {
 }
 
 @keyframes down-animation {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  50%, 60% {
+  50%,
+  60% {
     transform: rotate(6deg);
   }
   88% {
     transform: rotate(-1deg);
-=======
+  }
+}
 footer {
   position: relative;
   width: 100%;
   background: rgb(60, 165, 60);
   min-height: 100px;
-  margin-top: 50px;
+  margin-top: 120px;
   padding: 20px 50px;
   display: flex;
   justify-content: center;
@@ -618,6 +622,5 @@ footer .wave#wave4 {
   }
   100% {
     background-position-x: 1000px;
->>>>>>> 7c7482a4bb663d692bcc317188aa5e0a95efa004
   }
 }
