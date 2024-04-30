@@ -245,7 +245,9 @@ header {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 } */
 .vma{
-  background: linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+  background-color: #c3cbdc;
+  background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+  
 }
 .wrapper{
   width: 100%;
