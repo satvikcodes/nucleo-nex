@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Slider</title>
+    <link rel="stylesheet" href="/pages/lander.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">NucleoNex<label></label></h2>
+      <nav class="navigation">
+        <!-- <a href="#">HOME</a>
+        <a href="#">PROJECTS</a>
+        <a href="#">RESOURCES</a>
+        <a href="#">SERVICES</a>
+        <a href="#">CONTACT</a> -->
+        <button class="btnlogin" id="loginBtn">USER LOGIN</button>
+        <button class="btnlogin" id="signBtn">FACULTY LOGIN</button>
+      </nav>
+    </header>
+
+    <div class="image-overlay"></div>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img
+          class="carousel-image"
+          src="https://wallpapers.com/images/hd/laboratory-background-mg9d9d5x8zzf2noz.jpg"
+          alt="Image 1"
+        />
+        <img
+          class="carousel-image"
+          src="https://images6.alphacoders.com/134/1349907.jpeg"
+          alt="Image 2"
+        />
+        <img
+          class="carousel-image"
+          src="https://static.vecteezy.com/system/resources/thumbnails/022/006/618/small_2x/science-background-illustration-scientific-design-flasks-glass-and-chemistry-physics-elements-generative-ai-photo.jpeg"
+          alt="Image 3"
+        />
+      </div>
+    </div>
+
+    <div class="tagline-outer">
+      <div class="tagline-inner">
+        <div class="tagline1">What's Next?</div>
+        <div class="tagline">We're Researching the <span id="future">Future.</span></div>
+      </div>
+    </div>
+
+    <!-- AIM SECTION START  -->
+
+    <div class="vma">
+      <h1 class="heading">OUR <span class="auto-type"></span></h1>
+
+      <div class="wrapper">
+        <div class="container">
+          <input type="radio" name="slide" id="c1" />
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon">1</div>
+            </div>
+            <div class="description">
+              <h2>VISION</h2>
+              <p>
+                To be a vibrant hub for groundbreaking research and development, where students
+                tackle industry-grade projects, fostering innovation and shaping the future.
+              </p>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c2" checked />
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon">2</div>
+            </div>
+            <div class="description">
+              <h2>AIM</h2>
+              <p>
+                The NucleoNex Lab aims to bridge the gap between academia and industry by providing
+                students with the opportunity to work on real-world, industry-level projects. We
+                will foster an environment of innovation and collaboration.
+              </p>
+            </div>
+          </label>
+          <input type="radio" name="slide" id="c3" />
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon">3</div>
+            </div>
+            <div class="description">
+              <h2>MISSION</h2>
+              <p>
+                The NucleoNex Lab is dedicated to fostering a dynamic environment for
+                industry-relevant research and development, empowering students to become the next
+                generation of innovators.
+              </p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACULTIES SECTION START -->
+
+    <!-- FACULTIES SECTION END -->
+
+    <!-- FOOTER SECTION START -->
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icons">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        </li>
+      </ul>
+      <ul class="nav">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">TERMS & CONDITIONS</a></li>
+      </ul>
+      <p>©2024 iGroup | All Rights Reserved</p>
+    </footer>
+
+    <!-- FOOTER SECTION END -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="/script/slider.js"></script>
+  </body>
+</html>
